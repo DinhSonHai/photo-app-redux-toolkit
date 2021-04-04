@@ -7,6 +7,7 @@ import { Formik, Form, FastField } from 'formik';
 import { PHOTO_CATEGORY_OPTIONS } from 'constants/global';
 import Images from '../../../../constants/images';
 import InputField from 'custom-fields/InputField';
+import SelectField from 'custom-fields/SelectField';
 
 PhotoForm.propTypes = {
   
@@ -15,6 +16,7 @@ PhotoForm.propTypes = {
 function PhotoForm(props) {
   const initialValues = {
     title: 'Initial Values',
+    categoryId: null,
   }
 
   return (
@@ -31,6 +33,15 @@ function PhotoForm(props) {
 
               label="Title"
               placeholder="Eg: Wow nature ..."
+            />
+
+            <FastField 
+              name="categoryId"
+              component={SelectField}
+
+              label="Category"
+              placeholder="What's your photo category?"
+              options={PHOTO_CATEGORY_OPTIONS}
             />
 
             <FormGroup>
