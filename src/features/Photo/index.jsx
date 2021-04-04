@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
-import NotFound from '../../components/NotFound';
 import AddEdit from './pages/AddEdit';
 import Main from './pages/Main';
 import PropTypes from 'prop-types';
+import NotFound from 'components/NotFound';
 
 Photo.propTypes = {
   
