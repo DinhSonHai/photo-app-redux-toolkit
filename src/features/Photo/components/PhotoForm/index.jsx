@@ -15,7 +15,7 @@ PhotoForm.propTypes = {
 
 function PhotoForm(props) {
   const initialValues = {
-    title: 'Initial Values',
+    title: '',
     categoryId: null,
   }
 
@@ -43,17 +43,6 @@ function PhotoForm(props) {
               placeholder="What's your photo category?"
               options={PHOTO_CATEGORY_OPTIONS}
             />
-
-            <FormGroup>
-              <Label for="categoryId">Category</Label>
-              <Select 
-                id="categoryId"
-                name="categoryId"
-
-                placeholder="What's your photo category?"
-                options={PHOTO_CATEGORY_OPTIONS}
-              />
-            </FormGroup>
 
             <FormGroup>
               <Label for="categoryId">Photo</Label>
